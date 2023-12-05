@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231205 17:58:39.432" rpa="false" schemaversion="4">
+<suite id="s1" name="HorizonGav" source="c:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier\GammePrevoyance\HorizonGav.robot">
+<test id="s1-t1" name="Test de Connexion à la Page" line="6">
+<kw name="Load JSON From File">
+<var>${file}</var>
+<arg>c:\\Users\\Stephane\\Desktop\\INFI-GLOBAL-PROJECTS\\TEST-PROJECT-LUCAV2-UI\\Luca.FunctionalTest.E2E.UI\\Particulier\\GammePrevoyance${/}jsonfile.json</arg>
+<msg timestamp="20231205 17:58:40.765" level="FAIL">No keyword with name 'Load JSON From File' found.</msg>
+<status status="FAIL" starttime="20231205 17:58:40.765" endtime="20231205 17:58:40.767"/>
+</kw>
+<kw name="Open Browser" library="QWeb">
+<arg>https://luca-dev2.spvie.com/auth/sign-in</arg>
+<arg>chrome</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Open new browser to given url.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.767" endtime="20231205 17:58:40.768"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Email</arg>
+<arg>demo-sogeti@spvie.com</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.768" endtime="20231205 17:58:40.769"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Mot de passe</arg>
+<arg>czUG6R3yuWLwLwQq</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.769" endtime="20231205 17:58:40.769"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Connexion</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.770" endtime="20231205 17:58:40.771"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Tarificateur</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.771" endtime="20231205 17:58:40.772"/>
+</kw>
+<kw name="Scroll" library="QWeb">
+<arg>Gamme Prévoyance</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Scrolls the page/element to given direction.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.772" endtime="20231205 17:58:40.773"/>
+</kw>
+<kw name="Verify Text" library="QWeb">
+<arg>HORIZON GAV</arg>
+<tag>Text</tag>
+<tag>Verification</tag>
+<doc>Verify page contains given text.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.773" endtime="20231205 17:58:40.774"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Faire un devis</arg>
+<arg>9</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.774" endtime="20231205 17:58:40.775"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Date de naissance du conjoint</arg>
+<arg>27/08/1975</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.776" endtime="20231205 17:58:40.776"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Date de naissance de l'assuré</arg>
+<arg>01/08/1980</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.776" endtime="20231205 17:58:40.777"/>
+</kw>
+<kw name="Click Item" library="QWeb">
+<arg>devoir de conseil</arg>
+<tag>Interaction</tag>
+<tag>Item</tag>
+<doc>Click item (usually icon or picture) on webpage.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.777" endtime="20231205 17:58:40.777"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Revenu mensuel brut :</arg>
+<arg>100</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.778" endtime="20231205 17:58:40.778"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Valider</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.778" endtime="20231205 17:58:40.779"/>
+</kw>
+<kw name="Scroll" library="QWeb">
+<arg>Garanties &amp; Cotisations</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Scrolls the page/element to given direction.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.779" endtime="20231205 17:58:40.779"/>
+</kw>
+<kw name="Click Item" library="QWeb">
+<arg>devoir de conseil</arg>
+<tag>Interaction</tag>
+<tag>Item</tag>
+<doc>Click item (usually icon or picture) on webpage.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.780" endtime="20231205 17:58:40.780"/>
+</kw>
+<kw name="Verify Text" library="QWeb">
+<arg>Budget</arg>
+<tag>Text</tag>
+<tag>Verification</tag>
+<doc>Verify page contains given text.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.780" endtime="20231205 17:58:40.781"/>
+</kw>
+<kw name="Click Element" library="QWeb">
+<arg>xpath=//div/div[1]/div/ng-component/div/form/section[2]/div[2]/div[2]/overlay-devoir-conseil/p-dialog[2]/div/div/div[3]/div/input</arg>
+<tag>Interaction</tag>
+<doc>Click element specified by xpath.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.781" endtime="20231205 17:58:40.782"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Valider</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.782" endtime="20231205 17:58:40.783"/>
+</kw>
+<kw name="Scroll" library="QWeb">
+<arg>Cotisation mensuelle en €/TTC</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Scrolls the page/element to given direction.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.783" endtime="20231205 17:58:40.784"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Seul</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.784" endtime="20231205 17:58:40.784"/>
+</kw>
+<kw name="Scroll" library="QWeb">
+<arg>Liste des produits et tarifs mensuels</arg>
+<tag>Browser</tag>
+<tag>Interaction</tag>
+<doc>Scrolls the page/element to given direction.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.785" endtime="20231205 17:58:40.785"/>
+</kw>
+<kw name="Verify Text" library="QWeb">
+<arg>Adhérent / Premier assuré</arg>
+<tag>Text</tag>
+<tag>Verification</tag>
+<doc>Verify page contains given text.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.786" endtime="20231205 17:58:40.786"/>
+</kw>
+<kw name="Get value From Json">
+<var>${json_postal_code}</var>
+<arg>${file}.[0]</arg>
+<arg>$.code_commune_insee</arg>
+<status status="NOT RUN" starttime="20231205 17:58:40.792" endtime="20231205 17:58:40.792"/>
+</kw>
+<kw name="Log To Console" library="BuiltIn">
+<arg>value test is</arg>
+<arg>${json_postal_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" starttime="20231205 17:58:40.793" endtime="20231205 17:58:40.793"/>
+</kw>
+<status status="FAIL" starttime="20231205 17:58:40.761" endtime="20231205 17:58:40.794">No keyword with name 'Load JSON From File' found.</status>
+</test>
+<status status="FAIL" starttime="20231205 17:58:39.437" endtime="20231205 17:58:40.795"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="HorizonGav">HorizonGav</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20231205 17:58:40.754" level="ERROR">Error in file 'c:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier\GammePrevoyance\HorizonGav.robot' on line 3: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  c:\Users\Stephane\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_debug_adapter
+  C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI
+  c:\Users\Stephane\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src
+  c:\Users\Stephane\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored
+  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\Stephane\AppData\Local\Programs\Python\Python311
+  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\Lib\site-packages</msg>
+</errors>
+</robot>

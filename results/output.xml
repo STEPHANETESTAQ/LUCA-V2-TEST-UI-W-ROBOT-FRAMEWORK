@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231205 17:57:12.228" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1.1 (Python 3.11.5 on win32)" generated="20231206 09:45:44.730" rpa="false" schemaversion="4">
 <suite id="s1" name="TEST-PROJECT-LUCAV2-UI" source="C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI">
 <suite id="s1-s1" name="Luca.FunctionalTest.E2E.UI" source="C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI">
 <suite id="s1-s1-s1" name="Particulier" source="C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier">
 <suite id="s1-s1-s1-s1" name="GammePrevoyance" source="C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier\GammePrevoyance">
-<suite id="s1-s1-s1-s1-s1" name="HorizonGav" source="C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier\GammePrevoyance\HorizonGav.robot">
-<test id="s1-s1-s1-s1-s1-t1" name="Test de Connexion à la Page" line="6">
-<kw name="${file}= Load JSON From File">
-<arg>C:\\Users\\Stephane\\Desktop\\INFI-GLOBAL-PROJECTS\\TEST-PROJECT-LUCAV2-UI\\Luca.FunctionalTest.E2E.UI\\Particulier\\GammePrevoyance${/}jsonfile.json</arg>
-<msg timestamp="20231205 17:57:13.545" level="FAIL">No keyword with name '${file}= Load JSON From File' found.</msg>
-<status status="FAIL" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<suite id="s1-s1-s1-s1-s1" name="Parcours-HORIZON-IJ-HOSPITALISATION" source="C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier\GammePrevoyance\Parcours-HORIZON-IJ-HOSPITALISATION.robot">
+<test id="s1-s1-s1-s1-s1-t1" name="Test de Connexion à la Page" line="13">
+<kw name="Load Json From File" library="JSONLibrary">
+<var>${file}</var>
+<arg>C:\\Users\\Stephane\\Desktop\\INFI-GLOBAL-PROJECTS\\TEST-PROJECT-LUCAV2-UI\\Luca.FunctionalTest.E2E.UI\\Particulier\\GammePrevoyance${/}PostalCodeOfCities.json</arg>
+<doc>Load JSON from file.</doc>
+<msg timestamp="20231206 09:45:46.838" level="INFO">${file} = [{'code_commune_insee': '25615', 'nom_de_la_commune': 'VILLARS LES BLAMONT', 'code_postal': '25310', 'ligne_5': None, 'libelle_d_acheminement': 'VILLARS LES BLAMONT', 'coordonnees_geographiques': {'lo...</msg>
+<status status="PASS" starttime="20231206 09:45:46.835" endtime="20231206 09:45:46.839"/>
 </kw>
 <kw name="Open Browser" library="QWeb">
 <arg>https://luca-dev2.spvie.com/auth/sign-in</arg>
@@ -17,7 +19,19 @@
 <tag>Browser</tag>
 <tag>Interaction</tag>
 <doc>Open new browser to given url.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<msg timestamp="20231206 09:45:46.840" level="INFO">
+QWeb version number: 3.0.0</msg>
+<msg timestamp="20231206 09:45:48.614" level="INFO">Browser: chrome</msg>
+<msg timestamp="20231206 09:45:48.615" level="INFO">Browser version: 119.0.6045.200</msg>
+<msg timestamp="20231206 09:45:48.615" level="INFO">Chromedriver version: 119.0.6045.105 (38c72552c5e15ba9b3117c0967a0fd105072d7c6-refs/branch-heads/6045@{#1103})</msg>
+<status status="PASS" starttime="20231206 09:45:46.840" endtime="20231206 09:45:51.018"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${range_locator}</var>
+<arg>css:.input-range</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231206 09:45:51.021" level="INFO">${range_locator} = css:.input-range</msg>
+<status status="PASS" starttime="20231206 09:45:51.019" endtime="20231206 09:45:51.021"/>
 </kw>
 <kw name="Type Text" library="QWeb">
 <arg>Email</arg>
@@ -25,7 +39,7 @@
 <tag>Input</tag>
 <tag>Interaction</tag>
 <doc>Type given text to a text field.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:51.023" endtime="20231206 09:45:51.359"/>
 </kw>
 <kw name="Type Text" library="QWeb">
 <arg>Mot de passe</arg>
@@ -33,35 +47,35 @@
 <tag>Input</tag>
 <tag>Interaction</tag>
 <doc>Type given text to a text field.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:51.361" endtime="20231206 09:45:51.546"/>
 </kw>
 <kw name="Click Text" library="QWeb">
 <arg>Connexion</arg>
 <tag>Interaction</tag>
 <tag>Text</tag>
 <doc>Click text on web page.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:51.547" endtime="20231206 09:45:51.646"/>
 </kw>
 <kw name="Click Text" library="QWeb">
 <arg>Tarificateur</arg>
 <tag>Interaction</tag>
 <tag>Text</tag>
 <doc>Click text on web page.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:51.647" endtime="20231206 09:45:54.856"/>
 </kw>
 <kw name="Scroll" library="QWeb">
 <arg>Gamme Prévoyance</arg>
 <tag>Browser</tag>
 <tag>Interaction</tag>
 <doc>Scrolls the page/element to given direction.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:54.857" endtime="20231206 09:45:57.964"/>
 </kw>
 <kw name="Verify Text" library="QWeb">
 <arg>HORIZON GAV</arg>
 <tag>Text</tag>
 <tag>Verification</tag>
 <doc>Verify page contains given text.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:57.965" endtime="20231206 09:45:58.108"/>
 </kw>
 <kw name="Click Text" library="QWeb">
 <arg>Faire un devis</arg>
@@ -69,131 +83,216 @@
 <tag>Interaction</tag>
 <tag>Text</tag>
 <doc>Click text on web page.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
-</kw>
-<kw name="Type Text" library="QWeb">
-<arg>Date de naissance du conjoint</arg>
-<arg>27/08/1975</arg>
-<tag>Input</tag>
-<tag>Interaction</tag>
-<doc>Type given text to a text field.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:58.109" endtime="20231206 09:45:58.243"/>
 </kw>
 <kw name="Type Text" library="QWeb">
 <arg>Date de naissance de l'assuré</arg>
-<arg>01/08/1980</arg>
+<arg>${customerBirthday}</arg>
 <tag>Input</tag>
 <tag>Interaction</tag>
 <doc>Type given text to a text field.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.545" endtime="20231205 17:57:13.545"/>
+<status status="PASS" starttime="20231206 09:45:58.243" endtime="20231206 09:46:00.580"/>
 </kw>
-<kw name="Click Item" library="QWeb">
-<arg>devoir de conseil</arg>
+<kw name="Type Text" library="QWeb">
+<arg>Date de naissance du conjoint</arg>
+<arg>${spouseBirthday}</arg>
+<tag>Input</tag>
 <tag>Interaction</tag>
-<tag>Item</tag>
-<doc>Click item (usually icon or picture) on webpage.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.560" endtime="20231205 17:57:13.560"/>
+<doc>Type given text to a text field.</doc>
+<status status="PASS" starttime="20231206 09:46:00.581" endtime="20231206 09:46:01.291"/>
+</kw>
+<kw name="Click Element" library="QWeb">
+<arg>xpath=//button[@class='ng-star-inserted']</arg>
+<tag>Interaction</tag>
+<doc>Click element specified by xpath.</doc>
+<status status="PASS" starttime="20231206 09:46:01.291" endtime="20231206 09:46:02.480"/>
 </kw>
 <kw name="Type Text" library="QWeb">
 <arg>Revenu mensuel brut :</arg>
-<arg>100</arg>
+<arg>250</arg>
 <tag>Input</tag>
 <tag>Interaction</tag>
 <doc>Type given text to a text field.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.561" endtime="20231205 17:57:13.561"/>
+<status status="PASS" starttime="20231206 09:46:02.481" endtime="20231206 09:46:03.706"/>
 </kw>
 <kw name="Click Text" library="QWeb">
 <arg>Valider</arg>
 <tag>Interaction</tag>
 <tag>Text</tag>
 <doc>Click text on web page.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.561" endtime="20231205 17:57:13.561"/>
+<status status="PASS" starttime="20231206 09:46:03.707" endtime="20231206 09:46:03.826"/>
 </kw>
 <kw name="Scroll" library="QWeb">
 <arg>Garanties &amp; Cotisations</arg>
 <tag>Browser</tag>
 <tag>Interaction</tag>
 <doc>Scrolls the page/element to given direction.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.562" endtime="20231205 17:57:13.562"/>
+<status status="PASS" starttime="20231206 09:46:03.827" endtime="20231206 09:46:06.683"/>
 </kw>
 <kw name="Click Item" library="QWeb">
 <arg>devoir de conseil</arg>
 <tag>Interaction</tag>
 <tag>Item</tag>
 <doc>Click item (usually icon or picture) on webpage.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.562" endtime="20231205 17:57:13.563"/>
-</kw>
-<kw name="Verify Text" library="QWeb">
-<arg>Budget</arg>
-<tag>Text</tag>
-<tag>Verification</tag>
-<doc>Verify page contains given text.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.563" endtime="20231205 17:57:13.563"/>
+<status status="PASS" starttime="20231206 09:46:06.684" endtime="20231206 09:46:07.183"/>
 </kw>
 <kw name="Click Element" library="QWeb">
 <arg>xpath=//div/div[1]/div/ng-component/div/form/section[2]/div[2]/div[2]/overlay-devoir-conseil/p-dialog[2]/div/div/div[3]/div/input</arg>
 <tag>Interaction</tag>
 <doc>Click element specified by xpath.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.564" endtime="20231205 17:57:13.564"/>
+<status status="PASS" starttime="20231206 09:46:07.184" endtime="20231206 09:46:07.436"/>
 </kw>
 <kw name="Click Text" library="QWeb">
 <arg>Valider</arg>
 <tag>Interaction</tag>
 <tag>Text</tag>
 <doc>Click text on web page.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.564" endtime="20231205 17:57:13.565"/>
-</kw>
-<kw name="Scroll" library="QWeb">
-<arg>Cotisation mensuelle en €/TTC</arg>
-<tag>Browser</tag>
-<tag>Interaction</tag>
-<doc>Scrolls the page/element to given direction.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.565" endtime="20231205 17:57:13.565"/>
+<status status="PASS" starttime="20231206 09:46:07.437" endtime="20231206 09:46:07.583"/>
 </kw>
 <kw name="Click Text" library="QWeb">
 <arg>Seul</arg>
 <tag>Interaction</tag>
 <tag>Text</tag>
 <doc>Click text on web page.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.566" endtime="20231205 17:57:13.566"/>
+<status status="PASS" starttime="20231206 09:46:07.584" endtime="20231206 09:46:07.744"/>
+</kw>
+<kw name="Click Text" library="QWeb">
+<arg>Ajouter</arg>
+<tag>Interaction</tag>
+<tag>Text</tag>
+<doc>Click text on web page.</doc>
+<status status="PASS" starttime="20231206 09:46:07.745" endtime="20231206 09:46:08.358"/>
 </kw>
 <kw name="Scroll" library="QWeb">
 <arg>Liste des produits et tarifs mensuels</arg>
 <tag>Browser</tag>
 <tag>Interaction</tag>
 <doc>Scrolls the page/element to given direction.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.567" endtime="20231205 17:57:13.567"/>
+<status status="PASS" starttime="20231206 09:46:08.359" endtime="20231206 09:46:11.235"/>
 </kw>
-<kw name="Verify Text" library="QWeb">
-<arg>Adhérent / Premier assuré</arg>
-<tag>Text</tag>
-<tag>Verification</tag>
-<doc>Verify page contains given text.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.567" endtime="20231205 17:57:13.568"/>
+<kw name="Type Text" library="QWeb">
+<arg>Email</arg>
+<arg>demo-sogeti@spvie.com</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="PASS" starttime="20231206 09:46:11.236" endtime="20231206 09:46:12.344"/>
 </kw>
-<kw name="Get value From Json">
-<var>${json_postal_code}</var>
-<arg>${file}.[0]</arg>
-<arg>$.code_commune_insee</arg>
-<status status="NOT RUN" starttime="20231205 17:57:13.571" endtime="20231205 17:57:13.574"/>
+<kw name="Set Variable" library="BuiltIn">
+<var>${first_dict}</var>
+<arg>${file}[0]</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20231206 09:46:12.345" level="INFO">${first_dict} = {'code_commune_insee': '25615', 'nom_de_la_commune': 'VILLARS LES BLAMONT', 'code_postal': '25310', 'ligne_5': None, 'libelle_d_acheminement': 'VILLARS LES BLAMONT', 'coordonnees_geographiques': {'lon...</msg>
+<status status="PASS" starttime="20231206 09:46:12.345" endtime="20231206 09:46:12.346"/>
 </kw>
-<kw name="Log To Console" library="BuiltIn">
-<arg>value test is</arg>
-<arg>${json_postal_code}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" starttime="20231205 17:57:13.578" endtime="20231205 17:57:13.578"/>
+<kw name="Get Value From Json" library="JSONLibrary">
+<var>${value}</var>
+<arg>${first_dict}</arg>
+<arg>$.nom_de_la_commune</arg>
+<doc>Get Value From JSON using JSONPath</doc>
+<msg timestamp="20231206 09:46:12.373" level="INFO">${value} = ['VILLARS LES BLAMONT']</msg>
+<status status="PASS" starttime="20231206 09:46:12.346" endtime="20231206 09:46:12.373"/>
 </kw>
-<status status="FAIL" starttime="20231205 17:57:13.537" endtime="20231205 17:57:13.579">No keyword with name '${file}= Load JSON From File' found.</status>
+<kw name="Convert Json To String" library="JSONLibrary">
+<var>${json_str}</var>
+<arg>${value}[0]</arg>
+<doc>Convert JSON object to string</doc>
+<msg timestamp="20231206 09:46:12.375" level="INFO">${json_str} = "VILLARS LES BLAMONT"</msg>
+<status status="PASS" starttime="20231206 09:46:12.374" endtime="20231206 09:46:12.375"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${json_str}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231206 09:46:12.376" level="INFO">"VILLARS LES BLAMONT"</msg>
+<status status="PASS" starttime="20231206 09:46:12.376" endtime="20231206 09:46:12.376"/>
+</kw>
+<kw name="Name Male" library="FakerLibrary">
+<var>${NomAssure}</var>
+<msg timestamp="20231206 09:46:12.378" level="INFO">${NomAssure} = James Taylor</msg>
+<status status="PASS" starttime="20231206 09:46:12.377" endtime="20231206 09:46:12.379"/>
+</kw>
+<kw name="Phone Number" library="FakerLibrary">
+<var>${PhoneNumber}</var>
+<msg timestamp="20231206 09:46:12.380" level="INFO">${PhoneNumber} = 001-363-972-4613x7670</msg>
+<status status="PASS" starttime="20231206 09:46:12.379" endtime="20231206 09:46:12.380"/>
+</kw>
+<kw name="Address" library="FakerLibrary">
+<var>${adresseAssure}</var>
+<doc>:example: '791 Crist Parks, Sashabury, IL 86039-9874'</doc>
+<msg timestamp="20231206 09:46:12.394" level="INFO">${adresseAssure} = 5812 Sarah Meadow Suite 932
+Adrienneberg, SC 12973</msg>
+<status status="PASS" starttime="20231206 09:46:12.392" endtime="20231206 09:46:12.394"/>
+</kw>
+<kw name="Name Male" library="FakerLibrary">
+<var>${FullName}</var>
+<msg timestamp="20231206 09:46:12.396" level="INFO">${FullName} = Dustin Marshall</msg>
+<status status="PASS" starttime="20231206 09:46:12.395" endtime="20231206 09:46:12.396"/>
+</kw>
+<kw name="Name Male" library="FakerLibrary">
+<var>${postalCode}</var>
+<msg timestamp="20231206 09:46:12.398" level="INFO">${postalCode} = Richard Burns</msg>
+<status status="PASS" starttime="20231206 09:46:12.397" endtime="20231206 09:46:12.399"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Nom</arg>
+<arg>${NomAssure}</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="PASS" starttime="20231206 09:46:12.399" endtime="20231206 09:46:13.045"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>N° portable</arg>
+<arg>${PhoneNumber}</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="PASS" starttime="20231206 09:46:13.046" endtime="20231206 09:46:13.849"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Adresse</arg>
+<arg>${adresseAssure}</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<kw name="Log Screenshot" library="QWeb">
+<tag>Logging</tag>
+<doc>Log screenshot to Robot Framework log.</doc>
+<msg timestamp="20231206 09:46:24.159" level="INFO">Saved screenshot to C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\results\screenshots\screenshot-Test_de_Connexion__la_Page-cd3954a4-ba87-4410-9f39-b3e27abafa98.png</msg>
+<msg timestamp="20231206 09:46:24.163" level="INFO">Current url is: https://luca-dev2.spvie.com/tarificateur/ProductsPrev/Gav</msg>
+<msg timestamp="20231206 09:46:24.164" level="INFO" html="true">&lt;a href="screenshots/screenshot-Test_de_Connexion__la_Page-cd3954a4-ba87-4410-9f39-b3e27abafa98.png"&gt;&lt;img src="screenshots/screenshot-Test_de_Connexion__la_Page-cd3954a4-ba87-4410-9f39-b3e27abafa98.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20231206 09:46:24.004" endtime="20231206 09:46:24.164"/>
+</kw>
+<msg timestamp="20231206 09:46:24.166" level="FAIL">QWebElementNotFoundError: Unable to find element for locator Adresse in 10.0 sec</msg>
+<status status="FAIL" starttime="20231206 09:46:13.850" endtime="20231206 09:46:24.168"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Prénom</arg>
+<arg>${FullName}</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231206 09:46:24.169" endtime="20231206 09:46:24.169"/>
+</kw>
+<kw name="Type Text" library="QWeb">
+<arg>Code postal</arg>
+<arg>${postalCode}</arg>
+<tag>Input</tag>
+<tag>Interaction</tag>
+<doc>Type given text to a text field.</doc>
+<status status="NOT RUN" starttime="20231206 09:46:24.170" endtime="20231206 09:46:24.170"/>
+</kw>
+<status status="FAIL" starttime="20231206 09:45:46.833" endtime="20231206 09:46:24.170">QWebElementNotFoundError: Unable to find element for locator Adresse in 10.0 sec</status>
 </test>
-<status status="FAIL" starttime="20231205 17:57:12.310" endtime="20231205 17:57:13.581"/>
+<status status="FAIL" starttime="20231206 09:45:44.815" endtime="20231206 09:46:24.172"/>
 </suite>
-<status status="FAIL" starttime="20231205 17:57:12.305" endtime="20231205 17:57:13.584"/>
+<status status="FAIL" starttime="20231206 09:45:44.811" endtime="20231206 09:46:24.175"/>
 </suite>
-<status status="FAIL" starttime="20231205 17:57:12.299" endtime="20231205 17:57:13.586"/>
+<status status="FAIL" starttime="20231206 09:45:44.807" endtime="20231206 09:46:24.177"/>
 </suite>
-<status status="FAIL" starttime="20231205 17:57:12.297" endtime="20231205 17:57:13.588"/>
+<status status="FAIL" starttime="20231206 09:45:44.801" endtime="20231206 09:46:24.180"/>
 </suite>
-<status status="FAIL" starttime="20231205 17:57:12.270" endtime="20231205 17:57:13.589"/>
+<status status="FAIL" starttime="20231206 09:45:44.769" endtime="20231206 09:46:24.182"/>
 </suite>
 <statistics>
 <total>
@@ -206,22 +305,9 @@
 <stat pass="0" fail="1" skip="0" id="s1-s1" name="Luca.FunctionalTest.E2E.UI">TEST-PROJECT-LUCAV2-UI.Luca.FunctionalTest.E2E.UI</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s1-s1" name="Particulier">TEST-PROJECT-LUCAV2-UI.Luca.FunctionalTest.E2E.UI.Particulier</stat>
 <stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1" name="GammePrevoyance">TEST-PROJECT-LUCAV2-UI.Luca.FunctionalTest.E2E.UI.Particulier.GammePrevoyance</stat>
-<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="HorizonGav">TEST-PROJECT-LUCAV2-UI.Luca.FunctionalTest.E2E.UI.Particulier.GammePrevoyance.HorizonGav</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1-s1-s1-s1" name="Parcours-HORIZON-IJ-HOSPITALISATION">TEST-PROJECT-LUCAV2-UI.Luca.FunctionalTest.E2E.UI.Particulier.GammePrevoyance.Parcours-HORIZON-IJ-HOSPITALISATION</stat>
 </suite>
 </statistics>
 <errors>
-<msg timestamp="20231205 17:57:13.537" level="ERROR">Error in file 'C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\Luca.FunctionalTest.E2E.UI\Particulier\GammePrevoyance\HorizonGav.robot' on line 3: Importing library 'JSONLibrary' failed: ModuleNotFoundError: No module named 'JSONLibrary'
-Traceback (most recent call last):
-  None
-PYTHONPATH:
-  C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\lib
-  C:\Users\Stephane\Desktop\INFI-GLOBAL-PROJECTS\TEST-PROJECT-LUCAV2-UI\resources
-  c:\Users\Stephane\.vscode\extensions\d-biehl.robotcode-0.66.1\bundled\libs
-  c:\Users\Stephane\.vscode\extensions\d-biehl.robotcode-0.66.1\bundled\tool\robotcode
-  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\python311.zip
-  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\DLLs
-  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\Lib
-  C:\Users\Stephane\AppData\Local\Programs\Python\Python311
-  C:\Users\Stephane\AppData\Local\Programs\Python\Python311\Lib\site-packages</msg>
 </errors>
 </robot>
